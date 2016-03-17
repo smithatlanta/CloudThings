@@ -1,0 +1,48 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/IAM2InternalValidator
+permissions:
+  - object: /home/ubuntu/IAM2InternalValidator
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+    mode: 644
+    type:
+      - file
+  - object: /home/ubuntu
+    pattern: "IAM2InternalValidator"
+    owner: ubuntu
+    group: ubuntu
+    mode: 755
+    type:
+      - directory
+  - object: /home/ubuntu/IAM2InternalValidator
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+    mode: 755
+    type:
+      - directory
+hooks:
+  ApplicationStop:
+    - location: scripts/applicationStop.sh
+      timeout: 30
+      runas: ubuntu
+  BeforeInstall:
+    - location: scripts/beforeInstall.sh
+      timeout: 90
+      runas: ubuntu
+  AfterInstall:
+    - location: scripts/afterInstall.sh
+      timeout: 300
+      runas: ubuntu
+  ApplicationStart:
+    - location: scripts/applicationStart.sh
+      timeout: 30
+      runas: ubuntu
+  ValidateService:
+    - location: scripts/validateService.sh
+      timeout: 30
+      runas: ubuntu

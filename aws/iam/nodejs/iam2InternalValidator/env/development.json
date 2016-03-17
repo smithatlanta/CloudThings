@@ -1,0 +1,9 @@
+{
+  "AWS_REGION": "us-east-1",
+  "VALIDATEUSERURL": "http://127.0.0.1/isValid/",
+  "LOGLEVELSTDOUT": "error",
+  "STATSDHOST": "localhost",
+  "STATSDPORT": 8125,
+  "SYSTEMACCOUNTS": [ "masmith", "system", "operator", "root" ],
+  "ENABLESYSTEMACCOUNTCHECK": true
+}

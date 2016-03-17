@@ -1,0 +1,10 @@
+{
+  "builders": [{
+  "type": "googlecompute",
+  "account_file": "client_secret.json",
+  "project_id": "striking-water-548",
+  "source_image": "debian-7-wheezy-v20150127",
+  "zone": "us-central1-a",
+  "image_name": "mikestest2017"
+  }]  
+}

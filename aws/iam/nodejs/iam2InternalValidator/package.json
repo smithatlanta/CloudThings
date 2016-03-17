@@ -1,0 +1,26 @@
+{
+  "name": "IAM2InternalValidator",
+  "version": "0.0.1",
+  "description":"Loops thru IAM Users on a daily basis and verifies against third party to determine if user needs to be removed from AWS account",
+  "private": true,
+  "scripts": {
+    "test": "mocha test/index.js"
+  },
+  "engines": {
+    "node": "5.7.x"
+  },
+  "devDependencies": {
+    "mocha": "2.4.5",
+    "sinon": "1.17.3"
+  },
+  "dependencies": {
+    "async": "1.5.2",
+    "node-env-conf": "1.0.1",
+    "request":"2.69.0",
+    "bunyan":"1.7.1",
+    "statsd-client":"0.2.1",
+    "aws-sdk": "2.2.39",
+    "cron": "1.1.0",
+    "moment": "2.11.2"
+  }
+}

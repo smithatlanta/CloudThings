@@ -1,0 +1,19 @@
+{
+  "name": "disqueProducer",
+  "version": "0.0.1",
+  "description":"puts into queue",
+  "private": true,
+  "scripts": {
+    "test": "mocha test/index.js"    
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "devDependencies": {
+    "mocha": "2.1.0",
+    "sinon": "1.12.2"
+  },
+  "dependencies": {
+    "disque.js": "latest"
+  }
+}
